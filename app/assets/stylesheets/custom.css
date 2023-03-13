@@ -68,3 +68,54 @@
     justify-content: center;
     align-items: center;
 }
+.index2{
+    margin: 5%; 
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.index2 a{
+    color: black;
+
+}
+.index2 button a{
+    text-decoration: none;
+}
+.index2 button{
+    background-color:rgb(255, 204, 95);
+    color:black ;
+    border: 2px solid #a1a1a1;
+    font-size: 15px;
+    border-radius: 11px;
+}
+.new2{
+    padding: 50px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.signup{
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.signin{
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.useredit{
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.gshow{
+    margin: 5%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+}

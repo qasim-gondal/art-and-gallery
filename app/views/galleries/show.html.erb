@@ -1,4 +1,4 @@
-<h2><%= "#{@gallery.name}'s Profile" %></h2>
+<div class="gshow"><h2><%= "#{@gallery.name}'s Profile" %></h2>
  <label>Name:</label>
 <%= @gallery.name %><br>
  <label>Location: </label>
@@ -7,3 +7,4 @@
 <ul>
 </ul>
 <%= button_to "Click Here to Retire", @gallery, method: :delete %>
+</div>
