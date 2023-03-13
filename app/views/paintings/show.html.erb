@@ -1,6 +1,17 @@
-<h2>Info page</h2>
-<h2>Painting Name: <%=@painting.name%></h2><br>
-<h2>Price: <%="$#{@painting.price}"%></h2><br>
-<h2>Artist: <%=@painting.artist.name%></h2><br>
-<h2>Gallary: <%=@painting.gallery.name%></h2><br>
-<%= button_to "Sell Painting", method: :delete %><br>
+<div class="show2">
+<div class="card" style="width: 20rem;">  
+  <h5 class="card-title"><h3>Info page</h3></h5>
+<%=image_tag @painting.image.url if @painting.image?%>
+    <div class="card-body">
+
+    <ul class="list-group list-group-flush">
+    <li class="list-group-item"><h5>Painting Name: <%=@painting.name%></h5></li>
+    <li class="list-group-item">Price: <%="$#{@painting.price}"%></li>
+    <li class="list-group-item">Artist: <%=@painting.artist.name%></li>
+     <li class="list-group-item">Gallary: <%=@painting.gallery.name%></li>
+    </ul>
+    <div class="card-body">
+    <%= button_to "Sell Painting", method: :delete %><br>
+    </div>
+</div>
+</div>
