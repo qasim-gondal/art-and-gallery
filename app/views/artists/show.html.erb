@@ -1,0 +1,19 @@
+<h2><%= "#{@artist.name}'s Profile" %></h2>
+ <label>Name:</label>
+<%= @artist.name %><br>
+ <label>Age: </label>
+ <%= @artist.age %><br>
+<label>Experience Level: </label>
+<%= @artist.experience_level %><br>
+<button><%= link_to "Edit",  edit_artist_path %></button><br>
+<%= link_to "Create new painting", new_painting_path %><br>
+<label>Here is a list of all my paintings: </label><br>
+<ul>
+<%@artist.paintings.each do |painting| %>
+<li><%= link_to painting.name, painting %></li>
+<% end %>
+</ul>
+<%= button_to "Click Here to Delete", @artist, method: :delete %>
+
+
+

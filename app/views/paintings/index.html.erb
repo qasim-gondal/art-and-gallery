@@ -1,0 +1,6 @@
+<h2>Here is a list of all painting</h2>
+<ul>
+<%@paintings.each do |painting|%>
+<li><%= link_to painting.name, painting %></li>
+<%end%>
+</ul>
