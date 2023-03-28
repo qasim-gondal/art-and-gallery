@@ -13,6 +13,7 @@ class ArtistsController < ApplicationController
     end
     def create
     @artist= Artist.create(artist_params)
+    CrudNotificationMailer.create_notification(@artist).deliver_now
     redirect_to @artist
     end
 
