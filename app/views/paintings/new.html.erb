@@ -1,15 +1,20 @@
-<div class="new"><h2>Create a new Painting</h2>
-<%= form_for @painting do |f| %>
-<%= f.label :name %><br>
-<%= f.text_field :name, :required => true %><br>
-<%= f.label :price %><br>
-<%= f.number_field :price, :required => true %> <br><br>
-<%=f.label :image%>
-<%=f.file_field :image%><br><br>
-<%= f.label :artist %>
-<%= f.collection_select :artist_id,Artist.all, :id, :name%><br><br>
-<%= f.label :gallary %>
-<%= f.collection_select :gallery_id,Gallery.all, :id, :name%><br><br>
-<%= f. submit %>
-<% end %>
+<div class="new">
+  <h2>Create a new Painting</h2>
+  <%= form_for @painting do |f| %>
+    <%= f.label :name %><br>
+    <%= f.text_field :name, :required => true %><br>
+    <%= f.label :price %><br>
+    <%= f.number_field :price, :required => true %> <br>
+    <br>
+    <%=f.label :image%>
+    <%=f.file_field :image%><br>
+    <br>
+    <%= f.label :artist %>
+    <%= f.collection_select :artist_id,Artist.all, :id, :name%><br>
+    <br>
+    <%= f.label :gallary %>
+    <%= f.collection_select :gallery_id,Gallery.all, :id, :name%><br>
+    <br>
+    <%= f. submit %>
+  <% end %>
 </div>

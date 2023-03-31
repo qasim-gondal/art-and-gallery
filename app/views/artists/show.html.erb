@@ -1,32 +1,37 @@
-<div class="show"><div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title"><h2><%= "#{@artist.name}'s Profile" %></h2></h5>
+<div class="show">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">
+        <h2><%= "#{@artist.name}'s Profile" %></h2>
+      </h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"> <label>Name:</label>
+        <%= @artist.name %><br>
+      </li>
+      <li class="list-group-item"> <label>Age: </label>
+        <%= @artist.age %><br>
+      </li>
+      <li class="list-group-item"><label>Experience Level: </label>
+        <%= @artist.experience_level %><br>
+      </li>
+    </ul>
+    <div class="card-body">
+      <button><%= link_to "Edit",  edit_artist_path , class: "card-link" %></button>
+      <%= button_to "Click Here to Delete", @artist, method: :delete , class: "card-link"  %>
+    </div>
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"> <label>Name:</label>
-<%= @artist.name %><br></li>
-    <li class="list-group-item"> <label>Age: </label>
- <%= @artist.age %><br></li>
-    <li class="list-group-item"><label>Experience Level: </label>
-<%= @artist.experience_level %><br></li>
-  </ul>
-  <div class="card-body">
-<button><%= link_to "Edit",  edit_artist_path , class: "card-link" %></button>
-<%= button_to "Click Here to Delete", @artist, method: :delete , class: "card-link"  %>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">Here is a list of all my paintings:</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <%@artist.paintings.each do |painting| %>
+        <li class="list-group-item"><%= link_to painting.name, painting %></li>
+      <%end%>
+    </ul>
+    <div class="card-body">
+      <button><%= link_to "Create new painting", new_painting_path, class: "card-link" %></button>
+    </div>
   </div>
 </div>
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Here is a list of all my paintings:</h5>
-  </div>
-  <ul class="list-group list-group-flush">
-  <%@artist.paintings.each do |painting| %>
-    <li class="list-group-item"><%= link_to painting.name, painting %></li>
-    <%end%>
-  </ul>
-  <div class="card-body">
-    <button><%= link_to "Create new painting", new_painting_path, class: "card-link" %></button>
-  </div>
-</div>
-</div>
-

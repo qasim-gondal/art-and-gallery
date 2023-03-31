@@ -1,10 +1,10 @@
-<div class="gshow"><h2><%= "#{@gallery.name}'s Profile" %></h2>
- <label>Name:</label>
-<%= @gallery.name %><br>
- <label>Location: </label>
- <%= @gallery.location %><br>
-
-<ul>
-</ul>
-<%= button_to "Click Here to Retire", @gallery, method: :delete %>
+<div class="gshow">
+  <h2><%= "#{@gallery.name}'s Profile" %></h2>
+  <label>Name:</label>
+  <%= @gallery.name %><br>
+  <label>Location: </label>
+  <%= @gallery.location %><br>
+  <ul>
+  </ul>
+  <%= button_to "Click Here to Retire", @gallery, method: :delete %>
 </div>

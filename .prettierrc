@@ -1,0 +1,17 @@
+{
+  "overrides": [
+    {
+      "files": "**/*.rb",
+      "options": {
+        "parser": "ruby",
+        "singleQuote": true
+      }
+    },
+    {
+      "files": "**/*.{js,jsx,ts,tsx,json,html,css,scss,md}",
+      "options": {
+        "singleQuote": true
+      }
+    }
+  ]
+

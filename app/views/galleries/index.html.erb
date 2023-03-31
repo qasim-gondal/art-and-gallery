@@ -1,10 +1,11 @@
-<div class=" index2"><h2>Here are all galleries!</h2>
-<ul>
-<% @galleries.each do |gallery|%>
-<li><%= link_to gallery.name, gallery %></li><br>
-<%end%>
-</ul>
-
-<button><%= link_to "Create Gallery",  new_gallery_path %>
-</button>
+<div class=" index2">
+  <h2>Here are all galleries!</h2>
+  <ul>
+    <% @galleries.each do |gallery|%>
+      <li><%= link_to gallery.name, gallery %></li>
+      <br>
+    <%end%>
+  </ul>
+  <button><%= link_to "Create Gallery",  new_gallery_path %>
+  </button>
 </div>
