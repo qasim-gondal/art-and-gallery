@@ -1,5 +1,6 @@
 class CrudNotificationMailer < ApplicationMailer
-
+  def welcome
+    
   def create_notification(object)
     @object=object
     @object_count=object.class.count

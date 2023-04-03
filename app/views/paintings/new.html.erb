@@ -10,7 +10,7 @@
     <%=f.file_field :image%><br>
     <br>
     <%= f.label :artist %>
-    <%= f.collection_select :artist_id,Artist.all, :id, :name%><br>
+    <%= f.collection_select :artist_id,Artist.all, :id,:name%><br>
     <br>
     <%= f.label :gallary %>
     <%= f.collection_select :gallery_id,Gallery.all, :id, :name%><br>
