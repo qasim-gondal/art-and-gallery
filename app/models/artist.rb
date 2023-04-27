@@ -1,4 +1,6 @@
 class Artist < ApplicationRecord
-    has_many :paintings, dependent: :destroy
-    has_many :galleries,through: :paintings
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+  has_many :paintings, dependent: :destroy
+  has_many :galleries, through: :paintings
 end
