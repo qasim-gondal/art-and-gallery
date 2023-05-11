@@ -39,6 +39,7 @@ gem "jbuilder"
 # gem "bcrypt", "~> 3.1.7"
 gem "hirb"
 gem "friendly_id", "~> 5.4.0"
+gem "font-awesome-rails"
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
@@ -74,4 +75,5 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
   gem "ransack"
+  gem "resque"
 end
